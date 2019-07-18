@@ -1,9 +1,10 @@
 <?php
     // Привет всем разработчикам! Это главная страница проекта
- $title = 'главная страница';
- include $_SERVER['DOCUMENT_ROOT'] . '/modules/head.php';
- include $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php';
+    $title = 'главная страница';
+    include $_SERVER['DOCUMENT_ROOT'] . '/modules/head.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php';
 
+    //  Просто изменение в файле
 ?>
 
     <body>
