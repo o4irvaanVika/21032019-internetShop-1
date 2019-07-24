@@ -1,3 +1,5 @@
+// изменение
+
 class Product {
     constructor(productPrice, productPic, ProductName) {
         this.pic = productPic;
