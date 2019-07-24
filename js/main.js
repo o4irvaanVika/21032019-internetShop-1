@@ -1,4 +1,4 @@
-// изменение
+// изменение 
 
 class Product {
     constructor(productPrice, productPic, ProductName) {
