@@ -12,6 +12,13 @@
     }
 
     // формируем ссылку в цикле для каждой строчки, найденной в БД 
+
+    $count = 0;
+    if( isset( $_SESSION['basket'] ) ){
+        foreach( $_SESSION['basket'] as $basketItem ){
+            $count += (int) $basketItem['count'];   
+        }
+    }
 ?> 
 
 <div class="wrapper">
@@ -28,7 +35,7 @@
         
         <div class="header-right">
          <nav class="user">Привет,Виктория<span>(Выйти)</span></nav>
-         <a class="user-link">корзина(5)</a>
+         <a class="user-link">корзина(<?=$count?>)</a>
         </div>
   
     </header>

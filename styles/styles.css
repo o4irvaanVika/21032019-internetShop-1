@@ -1,0 +1,902 @@
+
+@font-face {
+    font-family: "MariadPro reg";
+    src: url(/fonts/myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF);    
+}
+
+@font-face{
+    font-family: "MariadPro italic";
+    src:url(/fonts/myriad-pro-cufonfonts/ofont.ru_Myriad\ Pro.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/fonts/roboto-cufonfonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "MV-Boli";
+    src: url(/fonts/9077.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 3px solid red; */
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main-picture {
+    height: 700px;
+    width: 100%;
+    background: url(../images/photos/top.jpg) center center / cover no-repeat;
+    position: relative;
+}
+
+.main-picture:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(38, 35, 81, 0.575);
+    position: absolute;
+    z-index: 1;
+}
+
+
+.picture-change {
+    position: absolute;
+    box-sizing: border-box;
+    left: calc(50%-43px); /* ширина wrapper - пол.блока с кружочками*/
+    display: inline-block;
+    bottom: 45px; 
+ }
+
+ .left, 
+ .right,
+ .sec,
+ .thi,
+ .fou  {
+     display: none;
+ }
+
+ 
+ .close-num-pic-change {
+     padding: 10px;
+     display: inline-block;
+     box-sizing: border-box;
+     position: relative;
+     
+ }
+ 
+ .close-num-pic-change-circ {
+     padding: 3px;
+     border-radius: 50%;
+     background: #ffffff;
+     box-sizing: border-box;
+ }
+ 
+ .close-num-pic-change-ring { 
+     position: absolute;
+     padding: 14px;
+     border: 3px solid #ffffff;
+     border-radius: 50%;
+     top: -3px; 
+     /* центр кольца перемещаем в центр круга
+        пол.высоты квадрата - пол.радиуса кольца
+     */
+     left: -3px;
+     box-sizing: border-box;
+ }
+
+.arrow-left {
+    padding: 27px;
+    border: 2px solid rgb(107, 143, 185);
+    border-radius: 50%;
+    background-color: rgba(38, 35, 81, 0.275);
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 29px);
+    box-sizing: border-box;
+
+}
+
+.arrow-left:before {
+    content: "";
+    padding: 8px;
+    position: absolute;
+    border: 3px solid yellow;
+    transform: rotate(-45deg);
+    left: 22px;
+    top: 16px;
+    box-sizing: border-box;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.arrow-right {
+    padding: 27px;
+    border: 2px solid rgb(107, 143, 185);
+    border-radius: 50%;
+    background-color: rgba(38, 35, 81, 0.275);
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 29px);
+    box-sizing: border-box;
+
+}
+
+.arrow-right:before {
+    content: "";
+    padding: 8px;
+    position: absolute;
+    border: 3px solid yellow;
+    transform: rotate(-45deg);
+    right: 22px;
+    bottom: 16px;
+    box-sizing: border-box;
+    border-left: 0;
+    border-top: 0;
+}
+
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 1200px;
+    box-sizing: border-box;
+    /* border: 1px solid #000000; */
+
+}
+
+.block-logotype {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* border: 1px solid #ffffff; */
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+
+.block-logotype:hover {
+    cursor: pointer;
+}
+
+
+header .logo {
+    padding: 10px;
+    background: url(../images/icons/spasskaya-tower.png) center center / 85% no-repeat;
+    min-width: 50px;
+    min-height: 50px;
+    /* border: 1px solid #777777; */
+}
+
+.font-logo {
+    font-family: "MV-Boli";
+    font-size: 35px;
+    color: rgb(255, 219, 71);
+}
+
+header nav {
+    z-index: 2;
+}
+
+header nav a {
+    font-family: "Roboto";
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+}
+
+
+header nav a:before {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -3px;
+    transition: 0.4s;
+}
+
+header nav a:hover:before {
+    width: 100%;
+}
+
+.picture-content {
+    position: absolute;
+    /* border: 6px solid #f65fff; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+.picture-content h1 {
+    color: #ffffff;
+    padding: 0px 5px;
+    font-size: 45px;
+    font-family: "Roboto";
+
+}
+
+.picture-content p {
+    color: #ffffff;
+    padding: 0px 5px;
+    font-family: "Roboto";
+    font-size: 22px;
+}
+
+.btn-about {
+    position: absolute;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Roboto";
+    color: #ffffff;
+    background: rgb(112, 157, 202);
+    border-radius: 10px;
+    bottom: 18%;
+    z-index: 1;
+}
+
+.up-case {
+    text-transform: uppercase;
+}
+
+
+.wrapper-services {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 5px solid #777777; */
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+
+.wrapper-services h2 {
+    font-family: "Roboto";
+    font-size: 28px;
+    color: rgb(112, 157, 202);
+    padding-right: 5px;
+    padding-top: 20px;
+
+}
+
+.block-services {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.wrapper-services p {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: rgb(83, 99, 103);
+    padding: 2px;
+    padding-bottom: 75px;
+}
+
+.block-services-item {
+    display: flex;
+    width: 50%;
+    box-sizing: border-box;
+    /* border: 2px solid #777777; */
+
+}
+
+.service-logo {
+    min-width: 15%;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    background: top left / 85% no-repeat;
+
+}
+
+.service-text {
+    min-width: 85%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+.service-text h3 {
+    font-family: "MariadPro reg";
+    text-align: left;
+    font-size: 22px;
+    color: rgb(57, 75, 80);
+    padding-bottom: 3px;
+    padding-right: 5px;
+}
+
+.service-text p {
+    font-family: "MariadPro reg";
+    text-align: left;
+    font-size: 18px;
+    color: rgb(123, 123, 123);
+    line-height: 1.6;
+
+}
+
+.route {
+    background-image: url(../images/icons/map.png);
+}
+
+.souvenir {
+    background-image: url(../images/icons/souvenir.png);
+}
+
+.compass {
+    background-image: url(../images/icons/compass.png);
+}
+
+.picture {
+    background-image: url(../images/icons/picture.png);
+}
+
+.discution {
+    background-image: url(../images/icons/discussion.png);
+}
+
+.sun {
+    background-image: url(../images/icons/sun.png);
+}
+
+.about-moscow {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+}
+
+.picture-group {
+    min-width: 50%;
+    background: url(../images/photos/group.jpg) top right / cover no-repeat;
+    box-sizing: border-box;
+}
+
+.text-group {
+    display: flex;
+    justify-content: left;
+    background: rgb(255, 193, 85);
+    min-width: 50%;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+.wrapper-group {
+    max-width: 600px;
+    height: 100%;
+    padding: 80px 10px 80px 83px;
+    box-sizing: border-box;
+}
+
+.wrapper-group h2 {
+    font-family: "MariadPro reg";
+    font-size: 28px;
+    padding-bottom: 30px;
+    color: #ffffff;
+    
+}
+
+.wrapper-group p {
+    font-family: "MariadPro reg";
+    font-size: 14px;
+    line-height: 1.75;
+    padding-bottom: 30px;
+    color: #ffffff;
+}
+
+.wrapper-group button {
+    padding: 17px 34px;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 3px;
+    background: rgb(248, 175, 62);
+
+}
+
+
+.wrapper-photos {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrapper-photos h2 {
+    font-family: "Roboto";
+    font-size: 28px;
+    color: rgb(112, 157, 202);
+    padding-top: 100px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.wrapper-photos h2:before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: rgb(255, 193, 85);
+    position: absolute;
+    bottom: -15px;
+    left: 15%;
+
+}
+
+
+.wrapper-photos p {
+    font-family: "MariadPro reg";
+    font-size: 18px;
+    color: rgb(123, 123, 123);
+    line-height: 10px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+}
+
+.moscow-photos {
+    display: flex;
+    flex-wrap: wrap;
+    height: 565px;
+}
+
+.moscow-photos-item {
+    min-width: 25%;
+    min-height: 25%;
+    box-sizing: border-box;
+    background: center center / cover no-repeat;
+    /* border: 1px solid #000000; */
+    
+}
+
+.bridge {
+    background-image: url(../images/photos/bridge.jpg);
+}
+
+.red-square {
+    background-image: url(../images/photos/red-square.jpg);
+}
+
+.arch {
+    background-image: url(../images/photos/arch.jpg);
+}
+
+.ring {
+    background-image: url(../images/photos/ring.jpg);
+
+}
+
+.museum {
+    background-image: url(../images/photos/museum.jpg);
+
+}
+.river {
+    background-image: url(../images/photos/river.jpg);
+
+}
+
+.history-mus {
+    background-image: url(../images/photos/history-mus.jpg);
+
+}
+
+.chamber {
+    background-image: url(../images/photos/chamber.jpg);
+
+}
+
+.arrow {
+    background: url(../images/icons/up-arrow.png) center center / contain no-repeat;
+    padding: 30px;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+}
+
+.wrapper-comments {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    text-align: center; 
+    /* border: 2px solid #777777; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.change-comment {
+   padding-top: 25px;
+   width: 100%;
+   box-sizing: border-box;
+
+}
+
+.num-comment {
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+
+
+
+.close-comment {
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+.close-comment-circ {
+    padding: 5px;
+    border-radius: 50%;
+    background: rgb(212, 211, 212);
+    box-sizing: border-box;
+}
+
+.close-comment-ring {
+    position: absolute;
+    padding: 8px;
+    border: 2px solid rgb(119, 162, 204);
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    box-sizing: border-box;
+}
+
+
+.wrapper-comments h2 {
+    font-family: "Roboto";
+    font-size: 28px;
+    color: rgb(112, 157, 202);
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.wrapper-comments h2:before {
+    content: "";
+    width: 200%;
+    height: 1px;
+    background-color: rgb(255, 193, 85);
+    position: absolute;
+    bottom: 15px; 
+    left: -50%;
+
+}
+
+.testing-users {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    /* border: 3px solid #d31515; */
+    box-sizing: border-box;
+    padding: 63px 55px 0 55px;
+    justify-content: space-between;
+}
+
+.font-test-item {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 44.66%;
+    /* border: 1px solid yellow; */
+    box-sizing: border-box;
+
+}
+
+.font-test-item-p {
+    text-align: left;
+    font-family: "MariadPro italic";
+    font-size: 14px;
+    color: rgb(127, 126, 126);
+    line-height: 1.5;
+    background: rgb(247, 243, 242);
+    width: 100%;
+
+}
+
+.font-test-item-p p {
+    padding: 15px;
+}
+
+.font-test-item-pic {
+    display: flex;
+    /* border: 1px solid #f65fff; */
+    align-items: center;
+    padding: 10px 0; 
+    width: 100%;
+  
+}
+
+.img-testing {
+    padding: 25px;
+    /* border: 1px solid #777777; */
+    background: center center / contain no-repeat;
+    display: inline-block;
+}
+
+.font-test-item-pic p {
+    color: #000000;
+    font-size: 14px;
+    font-family: "MariadPro reg";
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.test2 {
+    background-image: url(../images/testimonials/test1.jpg);
+}
+
+.test1 {
+    background-image: url(../images/testimonials/test2.jpg);
+}
+
+.font-form-mesager {
+    height: 422px;
+    /* border: 1px solid #f65fff; */
+    width: 100%;
+    background: rgb(238, 240, 240);
+}
+
+.wrapper-form-mes {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 2px solid #777777; */
+    text-align: center;
+}
+
+.wrapper-form-mes h2 {
+   
+    font-family: "Roboto";
+    font-size: 28px;
+    color: rgb(112, 157, 202);
+    padding-right: 5px;
+    padding-top: 20px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.wrapper-form-mes h2:before {
+    content: "";
+    width: 110%;
+    height: 1px;
+    background-color: rgb(255, 193, 85);
+    position: absolute;
+    bottom: -20px;
+    left: -5%;
+
+}
+
+.form-mesanger {
+    display: flex;
+    box-sizing: border-box;
+    /* border: 2px solid #f65fff; */
+    width: 100%;
+    padding-top: 80px;
+    min-height:280px;
+    
+
+}
+
+.form {
+    width: 100%;
+}
+
+[type="text"],
+[type="number"],
+[type="e-mail"],
+[type="submit"],
+textarea {
+    padding: 10px 0; 
+    border: 2px solid rgb(218, 163, 13);
+    box-sizing: border-box;
+    /* обязательно указывать для inputов!!!! */
+    outline: none;
+    /* нет рамок фокуса (когда ставим курсор в поле) */
+    width: 100%;
+    /* margin-bottom: 7px; */
+}
+
+textarea {
+    resize: vertical;
+    /* ограничение изменения ширины, можно изменять только по вертикали */
+    min-height: 80px;
+    /* уменьшите поле комментариев ниже 80рх невозможно из-за min-height */
+}
+
+[type="submit"] {
+    background-color: #262350;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.form {
+    display: flex;
+    /* border: 1px solid #262350; */
+    justify-content: space-between;
+}
+
+.blocks-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    width: 48%;
+    /* border: 1px solid #000000; */
+    box-sizing: border-box;
+}
+
+.block-area {
+    width: 48%;
+    /* border: 1px solid #262350; */
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 440px;
+    /* border: 1px solid #262350; */
+    box-sizing: border-box;
+
+}
+
+.footer-contacts {
+    width:100%;
+    background: rgb(39, 58, 67);
+    /* border: 2px solid #f65fff; */
+    
+
+}
+
+.wrapper-foot-cont {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* border: 1px solid #ce2dd6; */
+}
+
+.wrapper-foot-item {
+    width: 33.3333%; 
+    /* border: 1px solid yellow; */
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 0;
+          
+}
+
+
+footer .logo {
+    background: url(../images/icons/spasskaya-tower.png) center center / 85% no-repeat;
+    min-width: 25px;
+    min-height: 25px;
+    /* border: 1px solid #777777; */
+}
+
+.font-logo-footer {
+    font-family: "MV-Boli";
+    font-size: 14px;
+    color: rgb(255, 219, 71);
+}
+
+.block-logotype-footer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* border: 1px solid #ffffff; */
+    box-sizing: border-box;
+
+}
+
+footer h4 {
+    font-size: 14px;
+    color: #ffffff;
+    display: inline;
+    vertical-align: sub;
+}
+
+footer p {
+    font-family: "MariadPro reg";
+    font-size: 12px;
+    color: rgb(195, 195, 195);
+}
+
+
+.pics-address {
+    padding: 15px;
+    display: inline-block;
+    background: center center / 45% no-repeat;
+    vertical-align: middle;
+}
+
+.wrapper-foot-item p {
+    display: inline-block;
+}
+
+.gis {
+    background-image: url(../images/icons/placeholder.png);
+}
+
+.post {
+    background-image: url(../images/icons/mail.png);    
+}
+
+.phone {
+    background-image: url(../images/icons/telephone.png);
+}
+
+
+.footer-copyright-pic {   
+    background: rgb(23, 34, 39);   
+}
+
+
+.wrapper-copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px 0;
+
+}
+.social-vk {
+    background: url(../images/social/vk.png) center center / 85% no-repeat;
+    height: 25px;
+    padding: 8px;
+}
+.social-fb {
+    background: url(../images/social/facebook.png) center center / 85% no-repeat;
+    height: 25px;
+    padding: 8px;
+}
+.social-in {
+    background: url(../images/social/instagram.png) center center / 85% no-repeat;
+    height: 25px;
+    padding: 8px;
+}
+
+.copyright {
+    font-size: 9px;
+}
+
+.font-Mariad {
+    color: rgb(113, 182, 213);
+}
